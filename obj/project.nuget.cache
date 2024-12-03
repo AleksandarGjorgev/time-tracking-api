@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "BFu69yJaEsQ=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Uporabnik\\projects\\TimeTrackingAPI\\TimeTrackingAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Uporabnik\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.0\\microsoft.aspnetcore.openapi.9.0.0.nupkg.sha512",
+    "C:\\Users\\Uporabnik\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
