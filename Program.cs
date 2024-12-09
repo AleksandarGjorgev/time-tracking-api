@@ -65,13 +65,17 @@ builder.Services.AddSwaggerGen(c =>
 // Dodajanje CORS politike
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowSpecificOrigin", policy =>
+    options.AddPolicy("AllowedOriginsPolicy", policy =>
     {
-        policy.WithOrigins("http://localhost:3000", "https://time-tracking-rgaekbg0w-aleksandargjorgevs-projects.vercel.app", "https://time-tracking-app-git-main-aleksandargjorgevs-projects.vercel.app","https://time-tracking-app-beta.vercel.app") // Dovoli samo ta izvor
-              .AllowAnyHeader()
-              .AllowAnyMethod();
+        policy.SetIsOriginAllowed(origin =>
+        {
+            return origin.StartsWith("https://time-tracking") || origin == "http://localhost:3000";
+        })
+        .AllowAnyHeader()
+        .AllowAnyMethod();
     });
 });
+
 
 // Dodajanje MVC/Controllers
 builder.Services.AddControllers();
