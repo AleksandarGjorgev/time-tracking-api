@@ -52,7 +52,7 @@ namespace TimeTrackingAPI.Controllers
 
             if (string.IsNullOrEmpty(token))
             {
-                return Unauthorized(new { success = false, message = "Token ni prisoten v glavi zahtevka." });
+                return Unauthorized(new { success = true, message = "Token ni prisoten v glavi zahtevka." });
             }
 
             try
@@ -87,10 +87,6 @@ namespace TimeTrackingAPI.Controllers
                     })
                     .ToListAsync();
 
-                if (!workLogs.Any())
-                {
-                    return NotFound(new { success = false, message = "Noben delovni zapis ni najden." });
-                }
 
                 return Ok(new { success = true, data = workLogs });
             }
