@@ -28,9 +28,10 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     });
 
 
-// Dodajanje DbContext za SQLite
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlite("Data Source=app.db"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+
 
 // Dodajanje Swagger za dokumentacijo API-ja
 builder.Services.AddSwaggerGen(c =>
@@ -66,7 +67,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowSpecificOrigin", policy =>
     {
-        policy.WithOrigins("http://localhost:3000") // Dovoli samo ta izvor
+        policy.WithOrigins("http://localhost:3000", "https://time-tracking-app-beta.vercel.app") // Dovoli samo ta izvor
               .AllowAnyHeader()
               .AllowAnyMethod();
     });

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TimeTrackingAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+458e09996690c561c8fe4027d8aace79dd94adfa")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e773ec6bbf27f2c6e5710abb46689623b11b0fc5")]
 [assembly: System.Reflection.AssemblyProductAttribute("TimeTrackingAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TimeTrackingAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -2,7 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\Controllers",
-    "\\Data"
+    "\\Data",
+    "\\Migrations"
   ],
   "SelectedNode": "\\Program.cs",
   "PreviewInSolutionExplorer": false
