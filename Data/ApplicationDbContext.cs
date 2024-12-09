@@ -1,14 +1,16 @@
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using TimeTrackingAPI.Models;
 
 namespace TimeTrackingAPI.Data
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+            : base(options) { }
 
-        public DbSet<User> Users { get; set; }
+        // DbSet za delovni čas in vrste odsotnosti
         public DbSet<WorkLog> WorkLogs { get; set; }
-        public DbSet<AbsenceType> AbsenceTypes { get; set; }
+        public DbSet<AbsenceRecord> AbsenceRecords { get; set; }
     }
 }
