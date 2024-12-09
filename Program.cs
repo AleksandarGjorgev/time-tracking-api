@@ -67,7 +67,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowSpecificOrigin", policy =>
     {
-        policy.WithOrigins("http://localhost:3000", "https://time-tracking-rgaekbg0w-aleksandargjorgevs-projects.vercel.app", "https://time-tracking-app-beta.vercel.app/login") // Dovoli samo ta izvor
+        policy.WithOrigins("http://localhost:3000", "https://time-tracking-rgaekbg0w-aleksandargjorgevs-projects.vercel.app", "https://time-tracking-app-git-main-aleksandargjorgevs-projects.vercel.app","https://time-tracking-app-beta.vercel.app") // Dovoli samo ta izvor
               .AllowAnyHeader()
               .AllowAnyMethod();
     });
